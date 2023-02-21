@@ -1,0 +1,64 @@
+body {
+    background-color: black;
+}
+.free-trial {
+    font-weight: 900;
+    color: red;
+    animation: blinking 1.5s infinite;
+}
+@keyframes blinking {
+    0% {
+        color: red;
+    }
+    20% {
+        color: transparent;
+    }
+    100% {
+        color: red;
+    }
+}
+.free-content {
+    font-weight: 900;
+    color: red;
+    animation: blinkingContent 3s infinite;
+}
+@keyframes blinkingContent {
+    0% {
+        color: red;
+    }
+    20% {
+        color: transparent;
+    }
+    100% {
+        color: red;
+    }
+}
+.free-soko {
+    font-weight: 900;
+    color: yellow;
+    animation: blinkingSoko 3s infinite;
+}
+@keyframes blinkingSoko {
+    0% {
+        color: yellow;
+    }
+    20% {
+        color: transparent;
+    }
+    100% {
+        color: yellow;
+    }
+}
+
+.modal-fullscreen .modal-content {
+    background: rgba(73, 73, 73, 0.506);
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.carousel-inner img {
+    filter: brightness(100%);
+}
+.hidden {
+    display: none;
+}
