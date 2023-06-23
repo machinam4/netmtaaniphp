@@ -17,11 +17,13 @@
 
         <section class="product-image-gallery">
             <div class="gallery-inner">
-                <div id="owl-carousel" class="owl-carousel owl-theme">
+                <div id="owl-carousel" class="owl-carousel owl-theme has-popup-image">
                     <!-- Loop on product images to output carousel items -->
                     @foreach ($soko_item->images as $image)
                         <button class="gallery-item" data-slide="{{ $loop->index }}" tabindex="-1" aria-hidden="true">
-                            <img class="gallery-image" src="{{ url($image->name) }}" alt="{{ $soko_item->name }}">
+                            <a href="{{ url($image->name) }}">
+                                <img class="gallery-image" src="{{ url($image->name) }}" alt="{{ $soko_item->name }}">
+                            </a>
                         </button>
                     @endforeach
                 </div>
@@ -52,6 +54,10 @@
         </div>
 
         <div class="mb-4 p-5 border-b-2">{!! $soko_item->description !!}</div>
+        <div class="mb-4"><iframe width="500" height="300" src="https://www.youtube.com/embed/cWa_yJfXHso?controls=0"
+                title="Omah Lay - Soso" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe></div>
         <div class="flex w-full justify-start">
             <div class=" p-5 bg-green-600 text-white text-lg font-bold mr-4">
                 <span>Kshs. </span> <span class="text-2xl font-bold">{{ number_format($soko_item->price, 2) }}</span>
@@ -203,6 +209,19 @@
 
 @section('page-scripts')
     <script>
+        $(".has-popup-image").magnificPopup({
+            type: "image",
+            delegate: 'a',
+            gallery: {
+                // options for gallery
+                enabled: true
+            },
+            // closeOnContentClick: !0,
+            // mainClass: "mfp-fade",
+            // image: {
+            //     verticalFit: !0
+            // },
+        });
         var carousel = $('#owl-carousel');
         // All owl script customizations should be wrapped in an on initialize so that we don't call Owl functionality until the carousel has initialized.
         carousel.on('initialized.owl.carousel', function(event) {

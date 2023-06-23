@@ -115,10 +115,14 @@
             if (adType === 'image') {
                 $('#adImage').removeClass('hidden')
                 $('#advLink').addClass('hidden')
+                $('#Link').removeAttr('required');
+                $('#filepond').attr('required', true);
                 document.querySelector('input[name="image"]').setAttribute('accept', ".png, .jpg, .jpeg")
             } else if (adType === 'video') {
                 $('#adImage').removeClass('hidden')
                 $('#advLink').addClass('hidden')
+                $('#Link').removeAttr('required');
+                $('#filepond').attr('required', true);
                 document.querySelector('input[name="image"]').setAttribute('accept', ".mp4, .webm, .ogg")
             } else if (adType === 'link') {
                 $('#adImage').addClass('hidden')

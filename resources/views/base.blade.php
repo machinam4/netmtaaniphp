@@ -11,6 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ asset('assets/owlcarousel/assets/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/owlcarousel/assets/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}" type="text/css" media="all" />
+
 
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick-carousel/slick.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick-carousel/slick-theme.css') }}" />
@@ -68,6 +70,7 @@
     <!-- Remember to include jQuery :) -->
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{{ asset('assets/slick-carousel/slick.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/magnific-popup.js') }}"></script>
     <script src="{{ asset('assets/owlcarousel/owl.carousel.min.js') }}"></script>
 
     <!-- GetButton.io widget -->

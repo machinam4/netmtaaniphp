@@ -29,6 +29,10 @@ class Soko extends Model
     {
         return $this->hasMany(soko_images::class);
     }
+    public function video()
+    {
+        return $this->hasMany(soko_videos::class);
+    }
     public function visits()
     {
         return visits($this)->relation();
